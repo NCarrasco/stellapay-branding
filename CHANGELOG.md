@@ -39,3 +39,6 @@
 - Pendiente de marca: el repositorio no incluye un favicon aprobado. El navegador
   solicita `/favicon.ico` y recibe 404; no se crea uno nuevo para evitar inventar
   un recurso visual sin aprobación.
+- Con autorización del responsable se eliminan las copias locales no rastreadas
+  `index 2.html` y `login/index 2.html`; los archivos activos y versionados no se
+  modifican durante esta limpieza.
