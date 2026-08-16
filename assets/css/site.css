@@ -7,10 +7,12 @@ body {
   color: #111827;
 }
 
-#rubros,
+#funciones,
+#negocios,
+#como-funciona,
 #precios,
-#contacto,
-#demo {
+#preguntas,
+#contacto {
   scroll-margin-top: 88px;
 }
 

@@ -14,6 +14,7 @@ module.exports = {
         spGray100: '#F3F4F6',
         spGray200: '#E5E7EB',
         spGray300: '#D1D5DB',
+        spGray400: '#9CA3AF',
         spGray500: '#6B7280',
         spGray700: '#374151',
         spGray900: '#111827'
