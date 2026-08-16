@@ -1,5 +1,5 @@
 {
-  "name": "stellapay-bradingpage",
+  "name": "stellapay-branding-page",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -10,7 +10,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
+  "description": "Sitio comercial público de StellaPay POS",
   "devDependencies": {
     "autoprefixer": "^10.4.24",
     "postcss": "^8.5.6",

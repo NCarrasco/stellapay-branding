@@ -12,6 +12,8 @@ en `https://app.stellapaypos.com`.
   no a este sitio estático.
 - Los precios, límites y prestaciones deben validarse contra el backend de
   StellaPay POS antes de publicarse.
+- La duración predeterminada de la prueba se obtiene de `TRIAL_DAYS`; la página
+  puede explicar el valor vigente, pero el aplicativo es la fuente definitiva.
 
 ## Desarrollo
 
@@ -24,6 +26,15 @@ npm run build:css
 
 El sitio no contiene un backend ni debe capturar credenciales. Los formularios de
 acceso y registro siempre se atienden en el aplicativo.
+
+## Criterios de contenido
+
+- Usar lenguaje cotidiano para propietarios y administradores de negocios en
+  República Dominicana.
+- Explicar siglas la primera vez que aparezcan.
+- No publicar métricas de rendimiento, seguridad o disponibilidad sin evidencia.
+- No anunciar funciones, límites, precios ni niveles de soporte diferentes a los
+  definidos por el aplicativo.
 
 ## Flujo Git
 
