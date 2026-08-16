@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StellaPay POS | Control total para crecer</title>
+    <meta
+      name="description"
+      content="StellaPay POS para farmacias, food & bar y minimarkets. KPI en tiempo real, inventario, facturación NCF y control de accesos."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="./assets/css/tailwind.css" />
+    <link rel="stylesheet" href="./assets/css/site.css" />
+  </head>
+
+  <body class="font-sans text-spGray900">
+    <header id="topNav" class="site-nav sticky top-0 z-40 border-b border-spGray200 backdrop-blur-sm transition-all duration-200">
+      <nav class="max-w-7xl mx-auto px-5 sm:px-6 py-4 flex items-center justify-between">
+        <a href="https://stellapaypos.com" class="text-xl font-extrabold tracking-tight text-spPrimary">StellaPay</a>
+
+        <div class="hidden md:flex items-center gap-7 text-sm font-semibold text-spGray500">
+          <a href="#rubros" class="hover:text-spPrimary">Funcionalidades</a>
+          <a href="#precios" class="hover:text-spPrimary">Precios</a>
+          <a href="#contacto" class="hover:text-spPrimary">Contacto</a>
+        </div>
+
+        <a
+          href="https://stellapaypos.com/login"
+          class="access-link inline-flex items-center rounded-lg px-4 py-2 bg-spPrimary text-white text-sm font-semibold hover:bg-spPrimaryDark transition"
+        >
+          Acceso Clientes
+        </a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="max-w-7xl mx-auto px-5 sm:px-6 pt-14 pb-12 md:pt-20 md:pb-16 grid lg:grid-cols-2 gap-10 items-center fade-in">
+        <div>
+          <p class="inline-flex rounded-full bg-spGray100 border border-spGray200 px-3 py-1 text-xs font-bold uppercase tracking-wide text-spPrimary">
+            Fintech POS para el Caribe
+          </p>
+          <h1 class="mt-5 text-4xl md:text-5xl font-extrabold leading-tight text-spGray900">Lleva el control total de tu negocio al siguiente nivel.</h1>
+          <p class="mt-5 text-lg text-spGray500 max-w-xl">
+            StellaPay es el ecosistema POS diseñado para farmacias, bares y tiendas que buscan rapidez, seguridad y reportes en tiempo real.
+            Hecho por y para emprendedores del Caribe.
+          </p>
+
+          <div class="mt-8 flex flex-col sm:flex-row gap-4">
+            <a
+              href="https://stellapaypos.com/login"
+              class="access-link inline-flex justify-center items-center rounded-lg px-7 py-3 bg-spSuccess text-white text-base font-bold hover:opacity-95 transition"
+            >
+              Comenzar ahora
+            </a>
+            <a
+              href="#demo"
+              class="inline-flex justify-center items-center rounded-lg px-7 py-3 border border-spGray300 bg-white text-spGray900 text-base font-bold hover:bg-spGray100 transition"
+            >
+              Ver Demo en vivo
+            </a>
+          </div>
+        </div>
+
+        <div class="rounded-2xl border border-spGray200 bg-white shadow-panel p-4 sm:p-5">
+          <div class="flex items-center justify-between border-b border-spGray200 pb-4">
+            <div>
+              <p class="text-sm font-semibold text-spGray500">Live Business Board</p>
+              <p class="text-xl font-extrabold text-spGray900">Consola Ejecutiva StellaPay</p>
+            </div>
+            <span class="inline-flex items-center gap-2 text-xs font-bold text-spSuccess">
+              <span class="h-2 w-2 rounded-full bg-spSuccess animate-pulse"></span>
+              Actualizando
+            </span>
+          </div>
+
+          <div class="mt-4 grid grid-cols-2 gap-3">
+            <article class="rounded-xl border border-spGray200 bg-spGray50 p-4">
+              <p class="text-xs text-spGray500">Ventas Hoy</p>
+              <p class="text-2xl font-extrabold text-spGray900">RD$ <span data-counter="286450">0</span></p>
+              <p class="mt-1 text-xs font-bold text-spSuccess">+18.4%</p>
+            </article>
+            <article class="rounded-xl border border-spGray200 bg-spGray50 p-4">
+              <p class="text-xs text-spGray500">Ganancia Neta</p>
+              <p class="text-2xl font-extrabold text-spGray900">RD$ <span data-counter="94120">0</span></p>
+              <p class="mt-1 text-xs font-bold text-spSuccess">+12.7%</p>
+            </article>
+            <article class="rounded-xl border border-spGray200 bg-spGray50 p-4">
+              <p class="text-xs text-spGray500">Stock Crítico</p>
+              <p class="text-2xl font-extrabold text-spGray900"><span data-counter="12">0</span></p>
+              <p class="mt-1 text-xs font-bold text-spDanger">Atención inmediata</p>
+            </article>
+            <article class="rounded-xl border border-spGray200 bg-spGray50 p-4">
+              <p class="text-xs text-spGray500">Facturas NCF</p>
+              <p class="text-2xl font-extrabold text-spGray900"><span data-counter="842">0</span></p>
+              <p class="mt-1 text-xs font-bold text-spPrimary">Trazabilidad total</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="border-y border-spGray200 bg-white py-3">
+        <div class="max-w-7xl mx-auto px-5 sm:px-6 ticker text-sm text-spGray700 font-semibold">
+          <div class="ticker-track">
+            <span>Ganancias visibles por sucursal y por turno</span>
+            <span>Monitoreo de inventario en tiempo real</span>
+            <span>Facturación POS + NCF sin fricción</span>
+            <span>Control y accesos por roles y permisos</span>
+            <span>Ganancias visibles por sucursal y por turno</span>
+            <span>Monitoreo de inventario en tiempo real</span>
+            <span>Facturación POS + NCF sin fricción</span>
+            <span>Control y accesos por roles y permisos</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="rubros" class="max-w-7xl mx-auto px-5 sm:px-6 py-14 fade-in">
+        <h2 class="text-3xl md:text-4xl font-extrabold text-spGray900">Bento Grid Operativo</h2>
+        <p class="mt-3 text-spGray500 max-w-3xl">Todo lo clave del negocio en módulos accionables: KPI, inventario, facturación y seguridad.</p>
+
+        <div class="mt-8 grid md:grid-cols-6 gap-4" id="demo">
+          <article class="md:col-span-3 rounded-2xl border border-spGray200 bg-white p-6 shadow-soft">
+            <div class="flex items-center gap-3">
+              <i class="bi bi-graph-up-arrow text-2xl text-spPrimary"></i>
+              <h3 class="text-xl font-bold text-spGray900">KPI y Ganancias en Tiempo Real</h3>
+            </div>
+            <p class="mt-3 text-spGray500">Monitorea margen, ventas por hora y ticket promedio para decisiones rápidas.</p>
+            <div class="mt-4 space-y-3">
+              <div>
+                <div class="flex justify-between text-xs font-semibold text-spGray500 mb-1"><span>Ganancia mensual</span><span>82%</span></div>
+                <div class="h-2 rounded-full bg-spGray100 overflow-hidden"><div class="bar-fill h-full bg-spSuccess" data-progress="82"></div></div>
+              </div>
+              <div>
+                <div class="flex justify-between text-xs font-semibold text-spGray500 mb-1"><span>Ticket promedio</span><span>74%</span></div>
+                <div class="h-2 rounded-full bg-spGray100 overflow-hidden"><div class="bar-fill h-full bg-spPrimary" data-progress="74"></div></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="md:col-span-2 rounded-2xl border border-spGray200 bg-white p-6 shadow-soft">
+            <div class="flex items-center gap-3">
+              <i class="bi bi-box-seam text-2xl text-spPrimary"></i>
+              <h3 class="text-lg font-bold text-spGray900">Inventario Pro</h3>
+            </div>
+            <p class="mt-3 text-spGray500">Kardex, lotes y stock mínimo por sucursal.</p>
+            <div class="mt-5 rounded-xl border border-spGray200 p-4 bg-spGray50">
+              <p class="text-xs text-spGray500">Productos con bajo stock</p>
+              <p class="text-3xl font-extrabold text-spDanger"><span data-counter="7">0</span></p>
+            </div>
+          </article>
+
+          <article class="md:col-span-1 rounded-2xl border border-spGray200 bg-white p-6 shadow-soft">
+            <i class="bi bi-shield-lock text-2xl text-spSuccess"></i>
+            <h3 class="mt-3 text-lg font-bold text-spGray900">Accesos</h3>
+            <p class="mt-2 text-sm text-spGray500">Permisos por rol y auditoría activa.</p>
+            <span class="mt-4 inline-flex rounded-full bg-emerald-100 text-emerald-700 text-xs font-bold px-2 py-1">Encriptación bancaria</span>
+          </article>
+
+          <article class="md:col-span-2 rounded-2xl border border-spGray200 bg-white p-6 shadow-soft">
+            <div class="flex items-center gap-3">
+              <i class="bi bi-receipt text-2xl text-spPrimary"></i>
+              <h3 class="text-lg font-bold text-spGray900">Facturación NCF</h3>
+            </div>
+            <p class="mt-3 text-spGray500">Generación instantánea de comprobantes fiscales en cada venta.</p>
+            <p class="mt-4 text-xs text-spGray500">Secuencia actual</p>
+            <p class="text-lg font-extrabold text-spGray900">B02-0000<span data-counter="1842">0</span></p>
+          </article>
+
+          <article class="md:col-span-4 rounded-2xl border border-spGray200 bg-white p-6 shadow-soft">
+            <div class="flex items-center gap-3">
+              <i class="bi bi-speedometer2 text-2xl text-spPrimary"></i>
+              <h3 class="text-xl font-bold text-spGray900">Velocidad en Caja</h3>
+            </div>
+            <p class="mt-3 text-spGray500">Experiencia optimizada para que el cajero cobre rápido sin perder control.</p>
+            <div class="mt-5 grid sm:grid-cols-3 gap-3">
+              <div class="rounded-lg border border-spGray200 bg-spGray50 p-4"><p class="text-xs text-spGray500">Tiempo por venta</p><p class="text-2xl font-bold text-spGray900"><span data-counter="22">0</span>s</p></div>
+              <div class="rounded-lg border border-spGray200 bg-spGray50 p-4"><p class="text-xs text-spGray500">Cobros/hora</p><p class="text-2xl font-bold text-spGray900"><span data-counter="164">0</span></p></div>
+              <div class="rounded-lg border border-spGray200 bg-spGray50 p-4"><p class="text-xs text-spGray500">Errores de caja</p><p class="text-2xl font-bold text-spGray900"><span data-counter="1">0</span></p></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="precios" class="max-w-7xl mx-auto px-5 sm:px-6 pb-14 fade-in">
+        <h2 class="text-3xl md:text-4xl font-extrabold text-spGray900">Planes de Suscripción</h2>
+        <p class="mt-3 text-spGray500">Comparativa para decidir rápido. Silver está diseñado para crecimiento real.</p>
+
+        <div class="mt-8 grid md:grid-cols-3 gap-5">
+          <article class="rounded-2xl border border-spGray200 bg-white p-6 shadow-soft">
+            <p class="text-sm font-bold text-spGray500">Bronze</p>
+            <p class="mt-2 text-4xl font-extrabold text-spGray900">$45</p>
+            <p class="text-sm text-spGray500">/mes</p>
+            <ul class="mt-5 space-y-2 text-sm text-spGray700">
+              <li>1 Sucursal</li>
+              <li>Reportes Básicos</li>
+              <li>Soporte por Ticket</li>
+              <li><strong>Ideal para:</strong> Emprendedores</li>
+            </ul>
+          </article>
+
+          <article class="rounded-2xl border-2 border-spPrimary bg-white p-6 shadow-panel relative">
+            <span class="absolute -top-3 left-6 rounded-full bg-spPrimary text-white text-xs font-bold px-3 py-1">Más recomendado</span>
+            <p class="text-sm font-bold text-spPrimary">Silver</p>
+            <p class="mt-2 text-4xl font-extrabold text-spGray900">$85</p>
+            <p class="text-sm text-spGray500">/mes</p>
+            <ul class="mt-5 space-y-2 text-sm text-spGray700">
+              <li>Hasta 3 Sucursales</li>
+              <li>Kardex e Inventario Pro</li>
+              <li>Soporte Prioritario</li>
+              <li><strong>Ideal para:</strong> Negocios en Crecimiento</li>
+            </ul>
+          </article>
+
+          <article class="rounded-2xl border border-spGray200 bg-white p-6 shadow-soft">
+            <p class="text-sm font-bold text-spGray500">Gold</p>
+            <p class="mt-2 text-4xl font-extrabold text-spGray900">$145</p>
+            <p class="text-sm text-spGray500">/mes</p>
+            <ul class="mt-5 space-y-2 text-sm text-spGray700">
+              <li>Sucursales Ilimitadas</li>
+              <li>Auditoría y Logs de Seguridad</li>
+              <li>Soporte 24/7 + Consultoría</li>
+              <li><strong>Ideal para:</strong> Franquicias y Cadenas</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="max-w-7xl mx-auto px-5 sm:px-6 pb-16 fade-in">
+        <div class="rounded-2xl border border-spGray200 bg-white p-8 md:p-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 shadow-soft">
+          <div>
+            <h2 class="text-3xl font-extrabold text-spGray900">Ingresa a tu consola y toma el mando</h2>
+            <p class="mt-2 text-spGray500">Flujo directo: stellapaypos.com -> /login -> app.stellapaypos.com</p>
+          </div>
+          <a
+            href="https://stellapaypos.com/login"
+            class="access-link inline-flex items-center justify-center px-8 py-3 rounded-lg bg-spSuccess text-white font-extrabold hover:opacity-95 transition"
+          >
+            Ingresar a mi Consola
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer id="contacto" class="border-t border-spGray200 bg-white py-8">
+      <div class="max-w-7xl mx-auto px-5 sm:px-6 flex flex-col md:flex-row gap-4 justify-between text-sm text-spGray500">
+        <p>© <span id="year"></span> StellaPay POS. Todos los derechos reservados.</p>
+        <div class="flex gap-4">
+          <a href="mailto:contacto@stellapaypos.com" class="hover:text-spPrimary">contacto@stellapaypos.com</a>
+          <a href="https://stellapaypos.com/login" class="font-semibold text-spPrimary hover:text-spPrimaryDark">Acceso Clientes</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./assets/js/site.js"></script>
+  </body>
+</html>

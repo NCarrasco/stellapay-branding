@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StellaPay | Gatekeeper</title>
+    <meta name="description" content="Accede a tu consola StellaPay POS." />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/tailwind.css" />
+    <link rel="stylesheet" href="../assets/css/login.css" />
+  </head>
+
+  <body class="min-h-screen font-sans text-spGray900">
+    <main class="min-h-screen grid place-items-center px-5">
+      <section class="w-full max-w-md rounded-2xl border border-spGray200 bg-white p-7 shadow-panel">
+        <div class="text-center">
+          <a href="https://stellapaypos.com" class="inline-block text-2xl font-extrabold text-spPrimary tracking-tight">StellaPay</a>
+          <p class="mt-2 text-sm text-spGray500">Gatekeeper de Acceso Seguro</p>
+        </div>
+
+        <form class="mt-7 space-y-4" action="https://app.stellapaypos.com" method="get">
+          <div>
+            <label for="usuario" class="block text-sm font-semibold mb-1">Usuario o Correo</label>
+            <input
+              id="usuario"
+              type="text"
+              placeholder="tu@negocio.com"
+              class="w-full rounded-lg border border-spGray300 bg-white px-4 py-3 outline-none focus:border-spPrimary"
+            />
+          </div>
+
+          <div>
+            <label for="clave" class="block text-sm font-semibold mb-1">Contraseña</label>
+            <input
+              id="clave"
+              type="password"
+              placeholder="••••••••"
+              class="w-full rounded-lg border border-spGray300 bg-white px-4 py-3 outline-none focus:border-spPrimary"
+            />
+          </div>
+
+          <button
+            type="submit"
+            class="w-full rounded-lg bg-spSuccess text-white font-bold px-4 py-3 hover:opacity-95 transition"
+          >
+            Ingresar a mi Consola
+          </button>
+        </form>
+
+        <div class="mt-5 flex items-center justify-between text-sm">
+          <a href="https://app.stellapaypos.com/register" class="text-spPrimary font-semibold hover:text-spPrimaryDark">Crear cuenta</a>
+          <a href="https://stellapaypos.com" class="text-spGray500 hover:text-spGray900">Volver al inicio</a>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

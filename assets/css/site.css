@@ -1,0 +1,65 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #f9fafb;
+  color: #111827;
+}
+
+#rubros,
+#precios,
+#contacto,
+#demo {
+  scroll-margin-top: 88px;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.45s ease, transform 0.45s ease;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.site-nav {
+  background: rgba(255, 255, 255, 0.96);
+}
+
+.site-nav.is-scrolled {
+  background: #ffffff;
+}
+
+.ticker {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.ticker-track {
+  display: inline-flex;
+  gap: 2rem;
+  animation: ticker 24s linear infinite;
+}
+
+@keyframes ticker {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.bar-fill {
+  width: 0;
+  transition: width 1s ease;
+}
+
+.route-fade {
+  opacity: 0;
+  transition: opacity 0.18s ease;
+}
