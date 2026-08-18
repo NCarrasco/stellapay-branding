@@ -1,67 +1,222 @@
-html {
-  scroll-behavior: smooth;
+html { scroll-behavior: smooth; }
+
+body { background: #f9fafb; color: #111827; }
+
+#funciones, #negocios, #como-funciona, #precios, #preguntas, #contacto {
+  scroll-margin-top: 80px;
 }
 
-body {
-  background: #f9fafb;
-  color: #111827;
-}
-
-#funciones,
-#negocios,
-#como-funciona,
-#precios,
-#preguntas,
-#contacto {
-  scroll-margin-top: 88px;
-}
-
+/* ── Fade-in ────────────────────────────────────────────────────────────── */
 .fade-in {
   opacity: 0;
-  transform: translateY(14px);
-  transition: opacity 0.45s ease, transform 0.45s ease;
+  transform: translateY(16px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
 }
+.fade-in.show { opacity: 1; transform: translateY(0); }
 
-.fade-in.show {
-  opacity: 1;
-  transform: translateY(0);
-}
+/* ── Nav ────────────────────────────────────────────────────────────────── */
+.site-nav { background: rgba(255,255,255,0.96); }
+.site-nav.is-scrolled { background: #ffffff; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
 
-.site-nav {
-  background: rgba(255, 255, 255, 0.96);
-}
-
-.site-nav.is-scrolled {
-  background: #ffffff;
-}
-
-.ticker {
-  overflow: hidden;
-  white-space: nowrap;
-}
-
+/* ── Ticker ─────────────────────────────────────────────────────────────── */
+.ticker { overflow: hidden; white-space: nowrap; }
 .ticker-track {
   display: inline-flex;
-  gap: 2rem;
-  animation: ticker 24s linear infinite;
+  gap: 2.5rem;
+  animation: ticker 30s linear infinite;
 }
-
 @keyframes ticker {
-  from {
-    transform: translateX(0);
-  }
-
-  to {
-    transform: translateX(-50%);
-  }
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
 }
 
-.bar-fill {
-  width: 0;
-  transition: width 1s ease;
+/* ── Hero section ────────────────────────────────────────────────────────── */
+.hero-section { background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 30%, #f9fafb 70%); }
+
+.hero-bg-blob {
+  position: absolute;
+  top: -120px; right: -100px;
+  width: 500px; height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(79,70,229,0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+.hero-bg-blob-2 {
+  position: absolute;
+  bottom: -80px; left: -60px;
+  width: 350px; height: 350px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(16,185,129,0.10) 0%, transparent 70%);
+  pointer-events: none;
 }
 
-.route-fade {
-  opacity: 0;
-  transition: opacity 0.18s ease;
+.hero-gradient-text {
+  background: linear-gradient(135deg, #4F46E5 0%, #7C3AED 50%, #10B981 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-card {
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(8px);
+}
+
+.hero-stat-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.hero-stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* ── Stats ───────────────────────────────────────────────────────────────── */
+.stats-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.stats-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(79,70,229,0.12);
+}
+
+/* ── Feature icons ───────────────────────────────────────────────────────── */
+.feature-icon-box {
+  width: 52px; height: 52px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #ede9fe, #e0e7ff);
+  display: flex; align-items: center; justify-content: center;
+}
+
+/* ── Screenshots / Lightbox trigger ─────────────────────────────────────── */
+.screenshot-card { transition: transform 0.2s ease, box-shadow 0.2s ease; }
+.screenshot-card:hover { transform: translateY(-4px); box-shadow: 0 12px 30px rgba(0,0,0,0.12); }
+
+.screenshot-card:hover .screenshot-zoom-icon { opacity: 1 !important; }
+
+/* ── Testimonials ────────────────────────────────────────────────────────── */
+.testimonial-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.testimonial-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+.avatar-circle {
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 13px; font-weight: 800;
+  flex-shrink: 0;
+}
+
+/* ── Business type cards ─────────────────────────────────────────────────── */
+.negocio-card { cursor: default; }
+
+/* ── Steps ───────────────────────────────────────────────────────────────── */
+.step-number {
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  background: #4F46E5;
+  color: white;
+  font-size: 14px; font-weight: 800;
+  display: flex; align-items: center; justify-content: center;
+}
+.step-number-success { background: #10B981; }
+
+/* ── Plan badges ─────────────────────────────────────────────────────────── */
+.plan-badge {
+  display: inline-block;
+  font-size: 12px; font-weight: 700;
+  padding: 2px 10px;
+  border-radius: 99px;
+}
+.plan-badge-bronze { background: #FEF3C7; color: #92400E; }
+.plan-badge-silver { background: #E0E7FF; color: #3730A3; }
+.plan-badge-gold   { background: #FEF9C3; color: #713F12; }
+
+/* ── Security icons ──────────────────────────────────────────────────────── */
+.security-icon-box {
+  width: 56px; height: 56px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #ede9fe, #e0e7ff);
+  display: flex; align-items: center; justify-content: center;
+}
+
+/* ── FAQ accordion ───────────────────────────────────────────────────────── */
+.faq-body { display: none; }
+.faq-body.open { display: block; }
+.faq-icon.rotated { transform: rotate(180deg); }
+
+/* ── CTA final ───────────────────────────────────────────────────────────── */
+.cta-final {
+  background: linear-gradient(135deg, #4F46E5 0%, #7C3AED 60%, #4338CA 100%);
+}
+.cta-blob {
+  position: absolute;
+  top: -80px; right: -60px;
+  width: 400px; height: 400px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* ── Lightbox ────────────────────────────────────────────────────────────── */
+.lightbox {
+  display: none;
+  position: fixed; inset: 0;
+  z-index: 9999;
+  background: rgba(0,0,0,0.88);
+  align-items: center; justify-content: center;
+  padding: 20px;
+  animation: fadeIn 0.2s ease;
+}
+.lightbox.active { display: flex; }
+
+.lightbox-inner {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  display: flex; flex-direction: column; align-items: center; gap: 12px;
+}
+
+.lightbox-img {
+  max-width: 100%;
+  max-height: 80vh;
+  border-radius: 12px;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.5);
+  object-fit: contain;
+}
+
+.lightbox-caption {
+  color: rgba(255,255,255,0.85);
+  font-size: 14px; font-weight: 600;
+  text-align: center;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: -44px; right: -8px;
+  background: rgba(255,255,255,0.15);
+  border: none;
+  color: white;
+  font-size: 24px;
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: background 0.2s;
+}
+.lightbox-close:hover { background: rgba(255,255,255,0.28); }
+
+/* ── Mobile menu ─────────────────────────────────────────────────────────── */
+.mobile-menu.open { display: block; }
+
+/* ── Transitions ─────────────────────────────────────────────────────────── */
+.route-fade { opacity: 0; transition: opacity 0.18s ease; }
+.bar-fill { width: 0; transition: width 1s ease; }
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
