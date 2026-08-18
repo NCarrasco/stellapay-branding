@@ -194,6 +194,13 @@ function closeMobileMenu() {
     });
   });
 
+  // Cuando el usuario regresa con "atrás" (bfcache), quitar la clase de fade
+  window.addEventListener('pageshow', function (event) {
+    if (event.persisted || (window.performance && performance.navigation.type === 2)) {
+      document.body.classList.remove('route-fade');
+    }
+  });
+
   // Smooth scroll for anchor links
   document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
     anchor.addEventListener('click', function (event) {
