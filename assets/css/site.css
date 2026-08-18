@@ -408,7 +408,8 @@ body { background: #ffffff; color: #111827; }
   margin-bottom: 14px;
   display: block;
 }
-.testi-stars { display: flex; gap: 3px; margin-bottom: 16px; font-size: 13px; }
+.testi-stars { display: flex; gap: 4px; margin-bottom: 16px; font-size: 16px; }
+.testi-stars i { color: #F59E0B; }
 .testi-text {
   font-size: 15px;
   line-height: 1.75;
