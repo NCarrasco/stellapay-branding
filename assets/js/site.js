@@ -46,10 +46,30 @@ function actualizarPrecios() {
   });
 }
 
+function actualizarLimitesPlanes(data) {
+  data.forEach(function (plan) {
+    var card = document.querySelector('[data-codigo="' + plan.codigo + '"]');
+    if (!card) return;
+    var liU = card.querySelector('[data-campo="usuarios"]');
+    var liP = card.querySelector('[data-campo="productos"]');
+    var liF = card.querySelector('[data-campo="facturas"]');
+    var icon = '<i class="bi bi-check-lg text-spSuccess flex-shrink-0 mt-0.5"></i>';
+    if (liU && plan.limiteUsuarios < 500) {
+      liU.innerHTML = icon + 'Hasta ' + plan.limiteUsuarios + ' usuario' + (plan.limiteUsuarios > 1 ? 's' : '');
+    }
+    if (liP && plan.limiteProductos < 50000) {
+      liP.innerHTML = icon + 'Hasta ' + plan.limiteProductos.toLocaleString('es-DO') + ' productos';
+    }
+    if (liF && plan.limiteFacturasMes < 50000) {
+      liF.innerHTML = icon + 'Hasta ' + plan.limiteFacturasMes.toLocaleString('es-DO') + ' facturas/mes';
+    }
+  });
+}
+
 function cargarPlanes() {
   fetch(STELLAPAY_API + '/planes/publico')
     .then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); })
-    .then(function (data) { planesData = data; actualizarPrecios(); })
+    .then(function (data) { planesData = data; actualizarPrecios(); actualizarLimitesPlanes(data); })
     .catch(function () {});
 }
 

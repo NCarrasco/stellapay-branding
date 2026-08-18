@@ -590,6 +590,94 @@ body { background: #ffffff; color: #111827; }
 }
 .lightbox-close:hover { background: rgba(255,255,255,0.25); }
 
+/* ── COMPARISON TABLE ─────────────────────────────────────────────────── */
+.comparison-wrap {
+  overflow-x: auto;
+  border-radius: 20px;
+  border: 1px solid #E5E7EB;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+}
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  min-width: 560px;
+}
+.comparison-table thead tr { background: #F9FAFB; }
+.comparison-table th {
+  padding: 16px 20px;
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  text-align: center;
+  color: #9CA3AF;
+  border-bottom: 2px solid #E5E7EB;
+}
+.comparison-table th:first-child { text-align: left; width: 42%; }
+.comparison-table th.comp-sp-col {
+  background: #EEF2FF;
+  color: #4F46E5;
+  border-bottom-color: #4F46E5;
+}
+.comparison-table td {
+  padding: 14px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #6B7280;
+  border-bottom: 1px solid #F3F4F6;
+  text-align: center;
+  vertical-align: middle;
+}
+.comparison-table tr:last-child td { border-bottom: none; }
+.comparison-table td:first-child { text-align: left; color: #111827; font-weight: 600; }
+.comparison-table td.comp-sp-col { background: rgba(79,70,229,0.04); }
+.comp-yes { color: #10B981; font-size: 20px; }
+.comp-no  { color: #EF4444; font-size: 20px; }
+.comp-partial { display: inline-flex; align-items: center; gap: 5px; color: #F59E0B; font-size: 12px; font-weight: 700; }
+.comp-partial i { font-size: 16px; }
+
+/* ── WHATSAPP FLOAT ───────────────────────────────────────────────────── */
+.wa-float {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 900;
+  background: #25D366;
+  color: #fff;
+  border-radius: 50px;
+  padding: 14px 22px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 14px;
+  text-decoration: none;
+  box-shadow: 0 8px 28px rgba(37,211,102,0.45);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.wa-float:hover { transform: translateY(-3px); box-shadow: 0 14px 36px rgba(37,211,102,0.55); color: #fff; }
+.wa-float i { font-size: 22px; }
+@media (max-width: 640px) {
+  .wa-float { bottom: 20px; right: 16px; padding: 13px 16px; border-radius: 50%; }
+  .wa-float .wa-label { display: none; }
+}
+
+/* ── FOOTER SOCIAL ────────────────────────────────────────────────────── */
+.footer-social {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  background: #F3F4F6;
+  color: #6B7280;
+  font-size: 16px;
+  transition: background 0.2s, color 0.2s;
+  text-decoration: none;
+}
+.footer-social:hover { background: #4F46E5; color: #fff; }
+
 /* ── TRANSITIONS ──────────────────────────────────────────────────────── */
 .route-fade { opacity: 0; transition: opacity 0.18s ease; }
 .bar-fill { width: 0; transition: width 1s ease; }
