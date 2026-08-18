@@ -157,12 +157,14 @@ function closeMobileMenu() {
   var year = document.getElementById('year');
   if (year) year.textContent = new Date().getFullYear();
 
-  // Sticky nav shadow
-  var nav = document.getElementById('topNav');
-  if (nav) {
-    window.addEventListener('scroll', function () {
-      nav.classList.toggle('is-scrolled', window.scrollY > 8);
-    });
+  // Nav: oscura sobre el hero, blanca cuando el hero sale del viewport
+  var nav  = document.getElementById('topNav');
+  var hero = document.getElementById('hero');
+  if (nav && hero) {
+    var navObs = new IntersectionObserver(function (entries) {
+      nav.classList.toggle('is-scrolled', !entries[0].isIntersecting);
+    }, { threshold: 0 });
+    navObs.observe(hero);
   }
 
   // Page transition on external links
