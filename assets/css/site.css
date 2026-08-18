@@ -380,6 +380,7 @@ body { background: #ffffff; color: #111827; }
 /* ── TESTIMONIALS (dark glassmorphism) ───────────────────────────────── */
 .testi-section-dark {
   background: linear-gradient(145deg, #0A0820 0%, #16104A 50%, #0D1935 100%);
+  border-top: 1px solid rgba(255,255,255,0.08);
 }
 .testi-card {
   background: rgba(255,255,255,0.07);
